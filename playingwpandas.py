@@ -27,7 +27,7 @@ def create_plot(dic, date, enddate):
     smon = date.strftime("%m")
     daystart = date.strftime("%d")
     endday = enddate.strftime("%d")
-    save = "Graphs/"+ yr +"-" + smon + " " + daystart +  "-" + endday + ".png"
+    save = "Graphs/"+ yr +"-" + smon + ".png"
     title = "Frequency of word usage in " + mon + " " + yr
     plt.figure(num=None, figsize=(15, 15), dpi=100, facecolor='w', edgecolor='k')
     index = np.arange(len(dic.keys()))
@@ -80,8 +80,8 @@ df.drop(['date'], axis=1, inplace=True)
 
 
 
-for i in range(2014, 2018):
-    for j in range(1, 12):
+for i in range(2014, 2019):
+    for j in range(1, 13):
         x, y = monthrange(i, j)
         dateobjstart = datetime(i, j, 1)
         dateobjend = datetime(i, j, y)
